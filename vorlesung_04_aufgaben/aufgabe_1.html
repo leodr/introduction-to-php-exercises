@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aufgabe 1</title>
+  </head>
+  <body>
+    <!--
+    		Erstellen Sie eine Datei aufgabe_1.html, die ein Textfeld Benutzername
+			und ein Textfeld mit type=“password” für das Passwort hat. 
+			Die Verarbeitung der Eingabe soll von der Datei aufgabe_1.php 
+			vorgenommen werden. Bei der Eingabe “admin” und “geheim” soll der Text:
+			“Sie sind angemeldet als Administrator.” erscheinen, ansonsten ein
+			Hinweis auf ungültige Anmeldedaten. Die Übertragung soll mit der 
+			GET-Variante erfolgen. Manipulieren Sie die Werte in der URL bei Ihren Tests.
+
+        -->
+
+    <form action="./aufgabe_1.php" method="get">
+      <div>
+        <label for="username">
+          Benutzername:<br />
+          <input id="username" name="username" type="text" />
+        </label>
+      </div>
+      <div>
+        <label for="password">
+          Passwort:<br />
+          <input id="password" name="password" type="password" />
+        </label>
+      </div>
+      <div>
+        <button type="submit">Anmelden</button>
+      </div>
+    </form>
+  </body>
+</html>

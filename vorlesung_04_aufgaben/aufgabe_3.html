@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aufgabe 3</title>
+  </head>
+  <body>
+    <!--
+            Bauen Sie die html-Seite aufgabe_3.html mit 7 Lieblingsrestaurants
+			als Kontrollkästchen z. B. chinesisch. 
+			Die Verarbeitungsseite aufgabe_3.php soll die Auswahl der 
+			Lieblingsrestaurants als Satz ausgeben. Eine Mehrfachauswahl soll
+			möglich sein! 
+			Für den Fall, dass keine Auswahl erfolgt, geben sie hierzu eine Meldung aus.
+        -->
+
+    <form action="./aufgabe_3.php" method="get">
+      <fieldset>
+        <legend>Wähle deine Libelingsrestaurants:</legend>
+
+        <div>
+          <input type="checkbox" id="chinesisch" name="chinesisch" />
+          <label for="chinesisch">Chinesisch</label>
+        </div>
+        <div>
+          <input type="checkbox" id="italienisch" name="italienisch" />
+          <label for="italienisch">Italienisch</label>
+        </div>
+        <div>
+          <input type="checkbox" id="britisch" name="britisch" />
+          <label for="britisch">Britisch</label>
+        </div>
+        <div>
+          <input type="checkbox" id="griechisch" name="griechisch" />
+          <label for="griechisch">Griechisch</label>
+        </div>
+        <div>
+          <input type="checkbox" id="tuerkisch" name="tuerkisch" />
+          <label for="tuerkisch">Türkisch</label>
+        </div>
+        <div>
+          <input type="checkbox" id="gut-buergerlich" name="gut-buergerlich" />
+          <label for="gut-buergerlich">Gut-Bürgerlich</label>
+        </div>
+        <div>
+          <input type="checkbox" id="mongolisch" name="mongolisch" />
+          <label for="mongolisch">Mongolisch</label>
+        </div>
+      </fieldset>
+      <div>
+        <button type="submit">Suchen</button>
+      </div>
+    </form>
+  </body>
+</html>

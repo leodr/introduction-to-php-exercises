@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aufgabe 2</title>
+  </head>
+  <body>
+    <!--
+            Analog zu Aufgabe 1 soll nun die Übertragung mit der POST-Variante
+			erfolgen. Speichern Sie die Dateien unter dem Namen aufgabe_2… .
+			Vergleichen Sie die Unterschiede beim Aufruf im Browser zu Aufgabe 1
+			und schildern Sie ihre Beobachtungen in der Datei aufgabe_2.hmtl.
+        -->
+
+    <form action="./aufgabe_2.php" method="post">
+      <div>
+        <label for="username">
+          Benutzername:<br />
+          <input id="username" name="username" type="text" />
+        </label>
+      </div>
+      <div>
+        <label for="password">
+          Passwort:<br />
+          <input id="password" name="password" type="password" />
+        </label>
+      </div>
+      <div>
+        <button type="submit">Anmelden</button>
+      </div>
+    </form>
+
+    <!--
+      Bei Aufgabe 1 wurden die Form-Werte in Klartext in der URL 
+      hinterlegt und ein GET-Request wurde an den PHP-Server gesendet.
+
+      Bei Aufgabe 2 sind die Form-Werte nicht in der URL zu sehen
+      da sie im Request-Body des POST-Requests an den PHP-Server
+      gesendet wurden.
+    -->
+  </body>
+</html>

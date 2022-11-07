@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Aufgabe 3</title>
+    <style type="text/css">
+      body {
+        background: lightblue;
+        font-size: 24;
+      }
+
+      div {
+        color: blue;
+      } /* Regel 1: (0,0,0,1) */
+
+      body,
+      div {
+        color: black;
+      } /* Regel 2: (0,0,0,1) */
+
+      div.hervorgehoben {
+        color: red;
+      } /* Regel 3: (0,0,1,1) */
+
+      #oben {
+        color: yellow;
+      } /* Regel 4: (0,1,0,0) */
+
+      div#head {
+        color: green;
+      } /* Regel 5: (0,1,0,1) */
+    </style>
+  </head>
+  <body>
+    <!--
+    		CSS-Beispiel zur Anwendung der Spezifität:
+			a. Berechnen Sie die Spezifität der Regeln.
+			b. Welche Regel wird beim Beispieltext angewendet?
+         Es wird Regel #oben angewendet, da sie die größere Spezifität hat.
+
+			c. Schreiben Sie untereinander mehrere div-Tags mit Attributierungen in ein html-Dokument, sodass jede der Farben in den Regeln angezeigt wird. 
+			d. Falls es nicht möglich sein sollte, den Text in einer der Farben darzustellen, dann versuchen Sie dies zu begründen. 
+        -->
+    <div id="oben" class="hervorgehoben">
+      <h1>Beispieltext mit den gesuchten Attributen</h1>
+    </div>
+    <!-- Die erste div-Regel (color: blue) wird niemals angewendet, da die Regel
+         darunter die selbe Spezifität hat und die gleichen Elemente betrifft. 
+         Somit wird diese immer bevorzugt, da sie später im Stylesheet steht. -->
+    <div>Hier ein Text</div>
+    <div class="hervorgehoben">Hier ein weiter Text</div>
+    <!-- Das hier ist ein bisschen unschön, da nun zwei Elemente die ID oben 
+         haben, aber funktioniert trotzdem. -->
+    <div id="oben">Hier noch ein weiterer Text</div>
+    <div id="head">Hier der letzte Text</div>
+  </body>
+</html>
