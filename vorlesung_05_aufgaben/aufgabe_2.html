@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aufgabe 2</title>
+  </head>
+  <body>
+    <!--
+           Schreiben Sie zwei Funktionen berechneKreisflaeche und berechneKreisumfang,
+		   die beide als Parameter den Radius haben. Über eine HTML-Seite soll der 
+		   Radius in einem Eingabefeld eingegeben warden können. Die Verarbeitung 
+		   soll von einem PHP-Skript übernommen werden und bei erfolgreicher 
+		   Pflichtfeldeingabe sollen die beiden Methoden aufgerufen und deren 
+		   Ergebnisse mit echo ausgegeben werden.
+        -->
+
+    <form action="./aufgabe_2.php" method="get">
+      <label for="radius">
+        Radius:
+        <input
+          type="number"
+          name="radius"
+          id="radius"
+          min="0"
+          required
+          value="0"
+        />
+      </label>
+      <div><button type="submit">Abschicken</button></div>
+    </form>
+  </body>
+</html>

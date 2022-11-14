@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aufgabe 3</title>
+  </head>
+  <body>
+    <!--
+            Schreiben Sie ein Verarbeitungsskript mit der Methode fib zur Berechnung
+			der n-ten Fibonacci Zahl Fibonacci-Zahlen:
+			{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...}. 
+            a) Nutzen Sie dabei Rekursion, indem Sie folgende mathematische Vorschrift
+			   umsetzen:
+			   fib(n) = {  0 falls n = 0;
+            	    	   1 falls n = 1;
+						   fib(n-1) + fib(n-2) sonst}
+			b) Schreiben die eine html-Seite für die Eingabe von n. Was fällt beim
+ 	    		Aufruf fib(...) ab n > 60 auf?
+			c) Nutzen Sie die Methode test aus Aufgabe 1 zum Testen der Methode fib.
+ 	   	       So soll z. B. test(fib(8), 21) im Browser  „Die Werte sind identisch.“
+			   ausgeben.
+        -->
+
+    <form action="./aufgabe_3.php" method="get">
+      <label for="n">
+        n-te Fibonacci-Zahl:
+        <input type="number" name="n" id="n" min="0" required value="0" />
+      </label>
+      <div><button type="submit">Abschicken</button></div>
+    </form>
+  </body>
+</html>
