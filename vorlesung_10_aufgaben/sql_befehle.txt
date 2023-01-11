@@ -1,0 +1,41 @@
+-- 1.) Datenbank anlegen: 
+CREATE DATABASE phpws2021;
+
+-- 2.) Datenbanknutzer anlegen, der von den php-Skripten zum Zuriff auf die Datenbank verwendet wird: 
+GRANT SELECT, INSERT, UPDATE, DELETE
+   ON phpws2021.*
+   TO 'user_phpws2021'@'localhost'
+   IDENTIFIED BY 'phpFNeanW21';
+
+-- 3) Die Tabelle benutzer in der Datenbank anlegen:
+CREATE TABLE benutzer(
+    login varchar(20) NOT NULL default '',
+    passwort varchar(40) NOT NULL default '',
+    vorname varchar(30) NOT NULL default '', 
+    nachname varchar(30) NOT NULL default '', 
+    angemeldet_am timestamp NOT NULL default CURRENT_TIMESTAMP,
+    PRIMARY KEY  (login)
+);
+
+-- 4) Nutzer eintragen, die sich bei der Anwendung anmelden koennen:
+INSERT INTO benutzer(login, passwort, vorname, nachname) VALUES 
+('muster', 'muster123', 'Max', 'Mustermann'),
+('fred', 'fred123', 'Fred', 'Feuerstein'),
+('wilma', 'wilma123', 'Wilma', 'Feuerstein'),
+('paulchen', 'rosa123', 'Paulchen', 'Panther');
+
+-- 5) Die Tabelle Spielbegegungen in der Datenbank anlegen:
+CREATE TABLE spielbegegnungen(jahr int, spieltag int, heimmannschaft varchar(40), auswaertsmannschaft varchar(40), heim_tore int, auswaerts_tore int);
+
+-- 6) Spielbegegungen in die Datenbanktabelle eintragen:
+INSERT INTO spielbegegnungen(jahr, spieltag, heimmannschaft, auswaertsmannschaft, heim_tore, auswaerts_tore) VALUES 
+(2015, 1, 'Hamburg', 'Freiburg', 1, 2),
+(2015, 1, 'Berlin', 'Schalke', 0, 2),
+(2016, 2, 'Frankfurt', 'Hoffenheim', 2, 0),
+(2016, 2, 'Bremen', 'Hamburg', 2, 0),
+(2017, 17, 'Dortmund', 'Leipzig', 2, 2),
+(2017, 17, 'Köln', 'Hamburg', 2, 2),
+(2017, 18, 'Bremen', 'Leverkusen', 2, 1),
+(2018, 1, 'Köln', 'Düsseldorf', 4, 3),
+(2018, 1, 'Berlin', 'Leipzig', 2, 2);
+
