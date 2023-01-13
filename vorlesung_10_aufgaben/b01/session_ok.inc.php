@@ -4,4 +4,3 @@
 		echo '<p><a href="login.php">Anmelden</a></p>';
 		exit;
 	}
-?>

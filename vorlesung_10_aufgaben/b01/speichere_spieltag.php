@@ -54,7 +54,7 @@
         }
         if (!empty($auswaertsmannschaft))  {
             echo '<input id="auswaertsmannschaft" name="auswaertsmannschaft" value="'.$auswaertsmannschaft.'" type="hidden" /> ';
-        }
+        } 
         if (!empty($ergebnis))  {
             echo '<input id="ergebnis" name="ergebnis" value="'.$ergebnis.'" type="hidden" /> ';
         }
@@ -74,4 +74,3 @@
         fclose($file);
         include "ergebnisse_auflisten.php"; // Einbinden der Datei rezepte_auflisten, die wiederum die Datei rezeptliste.html einbindet, welche alle vorhanden Rezepteintraege enthaelt.
     }
-?>

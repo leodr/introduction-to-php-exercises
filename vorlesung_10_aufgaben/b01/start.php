@@ -16,4 +16,3 @@
 	echo 'Sie sind als erfolgreich angemeldet.';    
 	echo '<p><a href="index.php">Zur Eingabemaske</a></p>';
 	echo '<p><a href="login.php">Abmelden</a></p>';
-?>
