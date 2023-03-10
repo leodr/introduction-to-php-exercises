@@ -76,8 +76,6 @@ class DBFacade
   {
     $db = $this->getConnection();
     try {
-      // 1.a) Führen Sie bei dem Login-Mechanismus eine SQL-Injection durch
-      //      und verhindern Sie diese durch eine geeignete Maßnahme.
       $sql = 'SELECT COUNT(*) as anzahl FROM benutzer WHERE login=:benutzername AND passwort=:passwort;';
       $statement = $db->prepare($sql);
       $statement->bindParam(':benutzername', $benutzername);
